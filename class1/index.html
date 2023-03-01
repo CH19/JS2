@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1 JS</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<!-- <body onload="alert('la pagina esta cargando');"> -->
+<body>
+    <div >
+        <a href="">this's a link</a>
+
+    </div>
+    <script>
+        function abrirVentana(){
+            window.open("https://www.youtube.com/watch?v=bNBzOiavw_4")
+        }
+    </script>
+    <div onmouseenter="abrirVentana()">
+        <button>button here</button >
+    </div>
+    <div>
+        <label for="hi">Write here</label>
+        <input onclick="abrirVentana()" id="hi" name="hi" type="text" placeholder="press some information here"
+    </div>
+</body>
+</html>
