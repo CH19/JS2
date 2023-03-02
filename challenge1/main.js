@@ -4,10 +4,12 @@ let ProductoBuscar = prompt('indique el nombre del producto a buscar');
 let CantidadProducto = -1;
 while(CantidadProducto < 0 || NaN){
   CantidadProducto = parseInt(prompt('indique la cantidad'));
+  console.log(CantidadProducto, ProductoBuscar);
 }
 let decision = " ";
-function RealizarAccion(d, text){
-  return d = text;
+function RealizarAccion(text){
+  return text;
+   
 }
 // console.log(nombres, cantidades);
 // // AdicionOSustrae("articulo1", 3, false);
@@ -31,8 +33,14 @@ function AdicionOSustrae(nom, cant, accion){
 function MostrarDatos(){
   if(nombres.length === cantidades.length){
     for (let index = 0; index < nombres.length; index++) {
-      console.log(`nombre del producto: ${nombres[index]} cantidad del producto ${cantidades[index]}`)
+      let message = `nombre del producto: ${nombres[index]} cantidad del producto ${cantidades[index]}`;
+      console.log(message);
+      alert(message);
   
     }
   }
+}
+function ElPaPa(){
+  AdicionOSustrae(ProductoBuscar, CantidadProducto, decision);
+  MostrarDatos();
 }
