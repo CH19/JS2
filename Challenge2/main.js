@@ -39,9 +39,8 @@ const cuartaHeight = screen.availHeight/4;
      const NewVentana = `left=${cuartaWidth}, top=${cuartaHeight}` //Medidas para el objetivo 4
 
 
-function CambiarTitulo(){
+function CambiarTitulo(){ //funcion para cambiar el titulo. Se pudo haber puesto un prompt como arg pero siendo honesto no supe como plantearlo 
     let newTitle = " "
-    let confirmador = false
     do{
         newTitle = prompt('Indica que nuevo titulo deseas poner');
     }while(newTitle.length <= 0);
@@ -66,22 +65,22 @@ colors[11] = 'magenta';
 colors[12] = 'purple';
 colors[13] = 'turquoise';
 colors[14] = 'cyan';
-const someColors = colors //si se deseav volver a invocar a los colores completos se llama a esta variable
+let someColors = colors //si se desea volver a invocar a los colores completos se llama a esta variable
 function ArrRandom(arr){
     const ran = Math.round(Math.random() * (arr.length - 0) + 0);
    
-    console.log(colors);
+    console.log(someColors);
       return arr[ran];
 
 }
 
-const a = ArrRandom(colors); colors = colors.filter(arg => arg != a); //el metodo se hizo de esta forma para que en los proximos llamados a la funcion no hubieran problemas 
+const a = ArrRandom(someColors); someColors = someColors.filter(arg => arg != a); //el metodo se hizo de esta forma para que en los proximos llamados a la funcion no hubieran problemas 
 //por si se repetia algun color
 
-const b = ArrRandom(colors); colors = colors.filter(arg => arg != b);
-const c = ArrRandom(colors); colors = colors.filter(arg => arg != c);
-const d = ArrRandom(colors); colors = colors.filter(arg => arg != d);
-const e = ArrRandom(colors); colors = colors.filter(arg => arg != e);
+const b = ArrRandom(someColors); someColors = someColors.filter(arg => arg != b);
+const c = ArrRandom(someColors); someColors = someColors.filter(arg => arg != c);
+const d = ArrRandom(someColors); someColors = someColors.filter(arg => arg != d);
+const e = ArrRandom(someColors); someColors = someColors.filter(arg => arg != e);
 console.log(a,b,c,d,e);
 
 document.body.addEventListener('click', () => {
