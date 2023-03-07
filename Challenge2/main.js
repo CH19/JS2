@@ -83,7 +83,7 @@ const d = ArrRandom(someColors); someColors = someColors.filter(arg => arg != d)
 const e = ArrRandom(someColors); someColors = someColors.filter(arg => arg != e);
 console.log(a,b,c,d,e);
 
-document.body.addEventListener('click', () => {
+document.body.addEventListener('click', (even) => {
   document.body.style.background = `linear-gradient(to right bottom, ${a}, ${b}, ${c}, ${d}, ${e})`;
 });
 // console.log(colors);
