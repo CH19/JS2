@@ -2,7 +2,7 @@ function saberSegundos(num){
     return num*1000
 }
 // function SubirScroll(){
-//     if(confirm('desea subir arriba')){
+//     if(confirm('desea subir arriba')){ //intento de hacer la funcion del obj 1 spoiler no funciono
 //         console.log('este es el scroll y'  + scrollY)
 //         let ActualPosition = scrollY
 //         let scrollPosition = window.scrollY/2
@@ -87,3 +87,6 @@ document.body.addEventListener('click', (even) => {
   document.body.style.background = `linear-gradient(to right bottom, ${a}, ${b}, ${c}, ${d}, ${e})`;
 });
 // console.log(colors);
+
+/*Las funciones al principio pueden parecer desordenadas sin embargo las coloque asi porque como al momento de colocar el codigo js compilan primero indiferentemente
+de donde esten entonces vi logica en organizar tambien las funciones por objetivos*/
